@@ -1,0 +1,148 @@
+:root {
+  --primary-color: #1abc9c;
+  --secondary-color: #16a085;
+  --accent-color: #50c5b7;
+  --danger-color: #ff1493;
+  --success-color: #9cec5b;
+  --bg-light: #e8e893;
+  --text-light: #ffffff;
+  --text-dark: #2c3e50;
+  --shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  --radius: 12px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  user-select: none;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-light);
+  color: var(--text-dark);
+}
+
+/* Title */
+.title {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  font-size: 1.6em;
+  font-weight: 600;
+  padding: 0.7em;
+  color: var(--text-light);
+  letter-spacing: 1px;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1em;
+  padding: 0.8em;
+  background: var(--secondary-color);
+  box-shadow: var(--shadow);
+}
+
+.navbar a,
+.navbar select {
+  all: unset;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 15px;
+  padding: 8px 14px;
+  border-radius: 50px;
+  color: var(--text-light);
+  background: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar select:hover {
+  background: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+.navbar .icon {
+  display: none;
+}
+
+#menu,
+#random,
+#start {
+  border: none;
+  outline: none;
+}
+
+/* Center */
+.center {
+    /* margin-top: 2rem auto */
+  margin: 2rem auto;
+  background: #e7e3cf;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  height: 420px;
+  width: 70%;
+  max-height: 731px;
+  overflow: hidden;
+  padding: 1rem;
+}
+
+.array {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 100%;
+  gap: 2px;
+}
+
+/* Sorting bars */
+.cell {
+  flex: 0.5;
+  margin: 1px;
+  background: #3b5303;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.cell.done {
+  background: var(--success-color);
+}
+
+.cell.visited {
+  background: #6184d8;
+}
+
+.cell.current {
+  background: var(--accent-color);
+}
+
+.cell.min {
+  background: var(--danger-color);
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+  .title {
+    font-size: 1.3em;
+  }
+  .navbar {
+    gap: 0.5em;
+  }
+  .navbar *,
+  .navbar a {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+  .center {
+    width: 95%;
+  }
+}
