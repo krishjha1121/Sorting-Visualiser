@@ -34,7 +34,7 @@ const RenderList = async () => {
     const node = document.createElement("div");
     node.className = "cell";
     node.setAttribute("value", String(element));
-    node.style.height = `${3.8 * element}px`;
+    node.style.height = `${element}%`;
     arrayNode.appendChild(node);
   }
 };

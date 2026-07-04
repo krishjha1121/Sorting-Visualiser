@@ -39,8 +39,8 @@ class Helper {
     let value1 = this.list[index1].getAttribute("value");
     let value2 = this.list[index2].getAttribute("value");
     this.list[index1].setAttribute("value", value2);
-    this.list[index1].style.height = `${3.8 * value2}px`;
+    this.list[index1].style.height = `${value2}%`;
     this.list[index2].setAttribute("value", value1);
-    this.list[index2].style.height = `${3.8 * value1}px`;
+    this.list[index2].style.height = `${value1}%`;
   };
 }

@@ -116,7 +116,7 @@ class sortAlgorithms {
     for (let c = start, p = 0; c <= end && p < newList.length; ++c, ++p) {
       await this.help.pause();
       this.list[c].setAttribute("value", newList[p]);
-      this.list[c].style.height = `${3.5 * newList[p]}px`;
+      this.list[c].style.height = `${newList[p]}%`;
     }
     for (let c = start; c <= end; ++c) {
       if (!this.list[c].classList.contains("done")) {
