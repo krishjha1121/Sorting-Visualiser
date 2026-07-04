@@ -1,77 +1,17 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet" />
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-  <link rel="stylesheet" href="css/style.css" />
-  <title>Sorting Visualizer | Premium</title>
-</head>
-<body>
-  <!-- Ambient background glow elements -->
-  <div class="ambient-light light-1"></div>
-  <div class="ambient-light light-2"></div>
-  
-  <header class="nav-container glass-panel">
-    <h2 class="title" onclick="window.location.reload()">
-      Sorting<span class="highlight">Visualizer</span>
-    </h2>
-    <nav class="navbar" id="navbar">
-      <button class="nav-btn secondary-btn" id="random" onclick="RenderScreen()">
-        <i class="fa-solid fa-shuffle"></i> Generate
-      </button>
-      
-      <div class="custom-select-wrapper">
-        <select id="algo-menu" class="algo-menu nav-select">
-          <option value="0">Choose Algorithm</option>
-          <option value="1">Bubble Sort</option>
-          <option value="2">Selection Sort</option>
-          <option value="3">Insertion Sort</option>
-          <option value="4">Merge Sort</option>
-          <option value="5">Quick Sort</option>
-        </select>
-      </div>
-      
-      <div class="custom-select-wrapper">
-        <select id="size-menu" class="size-menu nav-select">
-          <option value="0">Array Size</option>
-          <option value="10">10 Elements</option>
-          <option value="20">20 Elements</option>
-          <option value="40">40 Elements</option>
-          <option value="60">60 Elements</option>
-          <option value="80">80 Elements</option>
-          <option value="100">100 Elements</option>
-        </select>
-      </div>
-
-      <div class="custom-select-wrapper">
-        <select id="speed-menu" class="speed-menu nav-select">
-          <option value="0">Speed</option>
-          <option value="0.5">Slow (0.5x)</option>
-          <option value="1" selected>Normal (1x)</option>
-          <option value="2">Fast (2x)</option>
-          <option value="4">Hyper (4x)</option>
-        </select>
-      </div>
-      
-      <button class="nav-btn primary-btn start">
-        <i class="fa-solid fa-play"></i> Sort
-      </button>
-      
-      <a class="icon"><i class="fa fa-bars"></i></a>
-    </nav>
-  </header>
-
-  <main class="center glass-panel">
-    <div class="array"></div>
-  </main>
-
-  <script src="js/helper.js"></script>
-  <script src="js/sorting-algos.js"></script>
-  <script src="js/app.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <title>Sorting Visualizer | React Edition</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
