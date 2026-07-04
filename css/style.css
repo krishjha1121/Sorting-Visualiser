@@ -1,29 +1,29 @@
 :root {
-  --bg-color: #0b0f19;
-  --glass-bg: rgba(18, 25, 43, 0.4);
-  --glass-border: rgba(255, 255, 255, 0.05);
-  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  --bg-color: #e8e893;
+  --glass-bg: rgba(255, 255, 255, 0.4);
+  --glass-border: rgba(0, 0, 0, 0.05);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
   
-  --primary-color: #00f0ff;
-  --primary-glow: rgba(0, 240, 255, 0.5);
+  --primary-color: #1abc9c;
+  --primary-glow: rgba(26, 188, 156, 0.4);
   
-  --secondary-color: #ff003c;
-  --secondary-glow: rgba(255, 0, 60, 0.5);
+  --secondary-color: #16a085;
+  --secondary-glow: rgba(22, 160, 133, 0.4);
   
-  --accent-color: #7000ff;
-  --accent-glow: rgba(112, 0, 255, 0.5);
+  --accent-color: #50c5b7;
+  --accent-glow: rgba(80, 197, 183, 0.4);
 
-  --success-color: #00ff73;
-  --success-glow: rgba(0, 255, 115, 0.5);
+  --success-color: #9cec5b;
+  --success-glow: rgba(156, 236, 91, 0.4);
   
-  --text-main: #ffffff;
-  --text-muted: #a0a5b5;
+  --text-main: #2c3e50;
+  --text-muted: #55606d;
 
   /* Bar colors */
-  --bar-default: #2a334a;
-  --bar-visited: var(--accent-color);
-  --bar-current: var(--primary-color);
-  --bar-min: var(--secondary-color);
+  --bar-default: #3b5303;
+  --bar-visited: #6184d8;
+  --bar-current: var(--accent-color);
+  --bar-min: #ff1493;
   --bar-done: var(--success-color);
   
   --radius-lg: 16px;
@@ -139,24 +139,30 @@ body {
 }
 
 .nav-select option {
-  background-color: var(--bg-color);
+  background-color: #ffffff;
   color: var(--text-main);
 }
 
-.nav-btn:hover, .nav-select:hover {
-  background: rgba(255, 255, 255, 0.1);
+.nav-btn:hover:not(:disabled), .nav-select:hover {
+  background: rgba(255, 255, 255, 0.7);
   transform: translateY(-2px);
+}
+
+.nav-btn:disabled, .nav-select:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
 }
 
 .primary-btn {
   background: var(--primary-color);
-  color: var(--bg-color);
+  color: #ffffff;
   border: none;
   box-shadow: 0 0 15px var(--primary-glow);
 }
-.primary-btn:hover {
-  background: #ffffff;
-  color: var(--primary-color);
+.primary-btn:hover:not(:disabled) {
+  background: var(--secondary-color);
+  color: #ffffff;
   box-shadow: 0 0 25px var(--primary-glow);
 }
 
@@ -191,6 +197,7 @@ body {
   justify-content: center;
   position: relative;
   overflow: hidden;
+  background: #e7e3cf;
 }
 
 .array {

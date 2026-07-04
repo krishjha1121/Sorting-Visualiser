@@ -1,5 +1,10 @@
 "use strict";
+
+let isSorting = false;
+
 const start = async () => {
+  if (isSorting) return;
+
   let algoValue = Number(document.querySelector(".algo-menu").value);
   let speedValue = Number(document.querySelector(".speed-menu").value);
 
@@ -11,15 +16,28 @@ const start = async () => {
     return;
   }
 
+  isSorting = true;
+  document.querySelector(".start").disabled = true;
+  document.getElementById("random").disabled = true;
+  document.querySelector(".algo-menu").disabled = true;
+  document.querySelector(".size-menu").disabled = true;
+
   let algorithm = new sortAlgorithms(speedValue);
   if (algoValue === 1) await algorithm.BubbleSort();
   if (algoValue === 2) await algorithm.SelectionSort();
   if (algoValue === 3) await algorithm.InsertionSort();
   if (algoValue === 4) await algorithm.MergeSort();
   if (algoValue === 5) await algorithm.QuickSort();
+
+  isSorting = false;
+  document.querySelector(".start").disabled = false;
+  document.getElementById("random").disabled = false;
+  document.querySelector(".algo-menu").disabled = false;
+  document.querySelector(".size-menu").disabled = false;
 };
 
 const RenderScreen = async () => {
+  if (isSorting) return;
   await RenderList();
 };
 
