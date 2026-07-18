@@ -1,4 +1,4 @@
-# Sorting Visualizer (React Edition)
+# Sorting Visualizer 
 
 A beautifully designed, interactive web application to visualize classic sorting algorithms. Built completely with **React** and **Vite** for a high-performance, frame-by-frame animation experience.
 
